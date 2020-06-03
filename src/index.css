@@ -1,0 +1,32 @@
+:root {
+  --bg-color: rgb(53, 103, 179);
+  --nav-color: rgb(37, 75, 133);
+  --button-color: rgb(28, 56, 99);
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+}
+
+nav {
+  background-color: var(--nav-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+}
+
+button {
+  border: none;
+  background-color: var(--nav-color);
+}
+
+button:hover {
+  background-color: var(--button-color);
+}
+
+button:focus {
+  outline: 0;
+}
