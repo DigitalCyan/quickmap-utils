@@ -9,7 +9,28 @@
     <nav>
       <button id="readBtn">Read</button>
       <button id="writeBtn">Write</button>
+      <button id="gitHubBtn">GitHub</button>
     </nav>
+    <div id="main">
+      <div id="editor">
+        <p>EDITOR</p>
+        <div>
+          <input type="text" placeholder="Port" id="PortBox" />
+          <hr>
+          <input type="text" placeholder="Command 1" id="Command1Box" />
+          <input type="text" placeholder="Command 2" id="Command2Box" />
+          <input type="text" placeholder="Command 3" id="Command3Box" />
+          <br>
+          <hr>
+          <label>Debug Mode:</label>
+          <input type="checkbox" id="DebugCheck" />
+        </div>
+      </div>
+      <div id="preview">
+        <p>PREVIEW</p>
+        <p id="previewParagraph" style="white-space: pre-line;">Test</p>
+      </div>
+    </div>
     <script>
       require("./index.js");
     </script>
