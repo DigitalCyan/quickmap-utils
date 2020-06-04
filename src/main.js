@@ -4,7 +4,7 @@ const path = require("path");
 const fs = require("fs");
 const opn = require("opn");
 
-const configPath = path.join(__dirname, "../../config.json")
+const configPath = path.join(__dirname, "../../../../config.json")
 
 app.on("ready", () => {
   const mainWin = new BrowserWindow({
