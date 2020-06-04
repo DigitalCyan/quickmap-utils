@@ -4,7 +4,7 @@ const path = require("path");
 const fs = require("fs");
 const opn = require("opn");
 
-const configPath = path.join(__dirname, "../../../../config.json")
+const configPath = path.join(__dirname, "../../../../config.json");
 
 app.on("ready", () => {
   const mainWin = new BrowserWindow({
@@ -12,7 +12,7 @@ app.on("ready", () => {
     height: 600,
     webPreferences: {
       nodeIntegration: true,
-    }
+    },
   });
 
   mainWin.menuBarVisible = false;
@@ -20,16 +20,11 @@ app.on("ready", () => {
 });
 
 ipcMain.on("read-config", (e) => {
-  e.returnValue = fs
-    .readFileSync(configPath)
-    .toString();
+  e.returnValue = fs.readFileSync(configPath).toString();
 });
 
 ipcMain.on("write-config", (e, arg) => {
-  fs.writeFileSync(
-    path.join(configPath),
-    JSON.stringify(arg, null, 2)
-  );
+  fs.writeFileSync(path.join(configPath), JSON.stringify(arg, null, 2));
   e.returnValue = 0;
 });
 
@@ -38,6 +33,6 @@ ipcMain.on("open-github", (e) => {
   e.returnValue = 0;
 });
 
-app.on('window-all-closed', () => {
+app.on("window-all-closed", () => {
   process.exit();
 });
