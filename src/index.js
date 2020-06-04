@@ -27,4 +27,14 @@ const updatePreview = (data) => {
   conf = JSON.parse(data);
 };
 
+const setValues = () => {
+  const data = JSON.parse(ipcRenderer.sendSync("read-config"));
+  document.querySelector("#portBox").value = data.port;
+  document.querySelector("#command1Box").value = data.binds.button_1;
+  document.querySelector("#command2Box").value = data.binds.button_2;
+  document.querySelector("#command3Box").value = data.binds.button_3;
+  document.querySelector("#debugCheck").checked = data.debug;
+};
+
+setValues();
 updatePreview(ipcRenderer.sendSync("read-config"));

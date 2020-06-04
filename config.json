@@ -1,9 +1,0 @@
-{
-  "port": "/dev/ttyUSB0",
-  "binds": {
-    "button_1": "",
-    "button_2": "",
-    "button_3": ""
-  },
-  "debug": false
-}
